@@ -4,4 +4,4 @@ COPY requirements.txt /app
 RUN pip install -r /app/requirements.txt
 EXPOSE 8080
 COPY . .
-CMD uvicorn api:app --port 8080 --host 0.0.0.0
+CMD uvicorn app:app --port 8080 --host 0.0.0.0
