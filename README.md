@@ -6,10 +6,20 @@ Has simple CI github runner.
 
 Will build out more stuff over time. 
 
-- Conda: Make sure you have a conda setup and create a new env 
-- ```conda create --name myenv python=3.11```
-- ```conda activate myenv```
-- requirements.txt should be current so you can ```pip install -r requirements.txt```
+Conda: Make sure you have a conda setup and create a new env:  
+```
+conda create --name myenv python=3.11
+```
+
+Then activate it:  
+```
+conda activate myenv
+```
+
+requirements.txt should be current so you can:  
+```
+pip install -r requirements.txt
+```
 
 To run tests:  
 ```
