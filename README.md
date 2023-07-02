@@ -1,10 +1,8 @@
-# python template api service
+# SuperSimple Python api service to be used as a template to start projects
 
 Uses FastAPI, uvicorn and pytest. 
 
 Has simple CI github runner. 
-
-Will build out more stuff over time. 
 
 Conda: Make sure you have a conda setup and create a new env:  
 ```
