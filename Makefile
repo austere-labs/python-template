@@ -7,11 +7,19 @@ format:
 
 test:
 	pytest -v
+	
+export-conda-env:
+	conda env export > environment.yml
+
+export-requirements:
+	pip freeze > requirements.txt
 
 check:
 	make lint
 	make format
 	make test
+	make export-conda-env
+	make export-requirements
 
 start:
 	uvicorn app:app --port 8080
@@ -21,9 +29,6 @@ docker-build:
 
 docker-run:
 	docker run -p 8080:8080 api
-
-export-conda-env:
-	conda env export > environment.yml
 
 setup:
 	conda env create -f environment.yml
