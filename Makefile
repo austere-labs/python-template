@@ -8,6 +8,11 @@ format:
 test:
 	pytest -v
 
+check:
+	make lint
+	make format
+	make test
+
 start:
 	uvicorn app:app --port 8080
 

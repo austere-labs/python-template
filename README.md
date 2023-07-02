@@ -1,7 +1,7 @@
 # SuperSimple Python api service ...
 ### to be used as a template to start projects
 
-Uses FastAPI, uvicorn and pytest. 
+Uses FastAPI, uvicorn and pytest.
 
 Has simple CI github runner, uses black for formatting and ruff for linting. 
 
