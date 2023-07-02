@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_welcome():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Welcome to forge API!"}
+    assert response.json() == {"message": "Welcome to template API service!"}

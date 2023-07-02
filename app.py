@@ -5,4 +5,4 @@ app = FastAPI()
 
 @app.get("/")
 async def welcome() -> dict:
-    return {"message": "Welcome to forge API!"}
+    return {"message": "Welcome to template API service!"}
