@@ -1,4 +1,5 @@
-# SuperSimple Python api service to be used as a template to start projects
+# SuperSimple Python api service ...
+### to be used as a template to start projects
 
 Uses FastAPI, uvicorn and pytest. 
 
