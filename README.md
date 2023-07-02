@@ -9,6 +9,12 @@ There is a Makefile that has **format**, **start**, **test**, **lint**, **check*
 
 Github runner uses these make calls to cohere local dev to the build process. 
 
+I've included my environment.yml file and it will be up to date.  
+You should be able to run it like so:  
+```
+make setup
+```
+**Otherwise...**  
 Conda: Make sure you have a conda setup and create a new env:  
 ```
 conda create --name myenv python=3.11
