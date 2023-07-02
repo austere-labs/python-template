@@ -22,5 +22,9 @@ docker-build:
 docker-run:
 	docker run -p 8080:8080 api
 
+export-conda-env:
+	conda env export > environment.yml
+
 setup:
 	conda env create -f environment.yml
+
