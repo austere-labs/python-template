@@ -5,7 +5,7 @@ Uses FastAPI, uvicorn and pytest.
 
 Has simple CI github runner, uses black for formatting and ruff for linting. 
 
-There is a Makefile that has **format**, **start**, **test**, **lint**, **docker-build** and **docker-run** commands respectively. 
+There is a Makefile that has **format**, **start**, **test**, **lint**, **check**, **docker-build** and **docker-run** commands respectively. 
 
 Github runner uses these make calls to cohere local dev to the build process. 
 
