@@ -4,7 +4,9 @@ Uses FastAPI, uvicorn and pytest.
 
 Has simple CI github runner, uses black for formatting and ruff for linting. 
 
-There is a Makefile that has **format**, **start**, **test**, **lint**, **docker-build** and **docker-run** commands respectively. Github runner uses these make calls to cohere local dev to the build process. 
+There is a Makefile that has **format**, **start**, **test**, **lint**, **docker-build** and **docker-run** commands respectively. 
+
+Github runner uses these make calls to cohere local dev to the build process. 
 
 Conda: Make sure you have a conda setup and create a new env:  
 ```
@@ -21,21 +23,27 @@ requirements.txt should be current so you can:
 pip install -r requirements.txt
 ```
 
+To lint:  
+```
+make lint
+
+```
+
 To run tests:  
 ```
-pytest -v
+make test
 ```
 
 If all goes well, for local dev, you should be able to run:  
 ```
-uvicorn app:app --port 8080
+make start
 ```
 
 For Docker:  
 ```
-docker build -t api .
+make docker-build
 ```
 
 ```
-docker run -p 8080:8080
+make docker-run
 ```
