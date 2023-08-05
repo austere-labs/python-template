@@ -1,33 +1,24 @@
-# SuperSimple Python api service ...
-### to be used as a template to start projects
+##Super Simple Python Service template
 
 Uses FastAPI, uvicorn and pytest.
 
 Has simple CI github runner, uses black for formatting and ruff for linting. 
+Runner pushes to docker hub. You will need to load your secrets in github for DOCKER_USERNAME and DOCKERHUB_TOKEN respectively. Or set it up per your preference.  
 
-There is a Makefile that has **format**, **start**, **test**, **lint**, **check**, **docker-build** and **docker-run** commands respectively. 
+###Please read the Makefile...
+
+It that has **format**, **start**, **test**, **lint**, **check**, **docker-build** and **docker-run** commands respectively. 
+
 
 Github runner uses these make calls to cohere local dev to the build process. 
 
-I've included my environment.yml file and it will be up to date.  
-You should be able to run it like so:  
+Please install Anaconda or Miniconda
+[Install Miniconda](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html#)
+
+Once you have that installed you can just run setup in Makefile like so: 
+
 ```
 make setup
-```
-**Otherwise...**  
-Conda: Make sure you have a conda setup and create a new env:  
-```
-conda create --name myenv python=3.11
-```
-
-Then activate it:  
-```
-conda activate myenv
-```
-
-requirements.txt should be current so you can:  
-```
-pip install -r requirements.txt
 ```
 
 To lint:  
