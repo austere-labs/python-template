@@ -32,6 +32,9 @@ docker-build:
 docker-run:
 	docker run -p 8080:8080 $(PROJECT_NAME)
 
+create-kernal
+	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 (fastapitorch)"
+
 setup:
 	conda create --name $(PROJECT_NAME) python=3.11
 	conda activate $(PROJECT_NAME)
