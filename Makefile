@@ -1,4 +1,4 @@
-PROJECT_NAME := indicators
+PROJECT_NAME := fastapitorch
 
 lint:
 	ruff --format=github --select=E9,F63,F7,F82 --target-version=py37 .
@@ -20,7 +20,6 @@ check:
 	make lint
 	make format
 	make test
-	make export-conda-env
 	make export-requirements
 
 start:
@@ -32,11 +31,15 @@ docker-build:
 docker-run:
 	docker run -p 8080:8080 $(PROJECT_NAME)
 
-create-kernal
+create-env:
+	conda env create -f torch-conda-nightly.yml -n $(PROJECT_NAME) python=3.11
+
+create-kernal:
 	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 (fastapitorch)"
 
 setup:
-	conda create --name $(PROJECT_NAME) python=3.11
+	make create-env
+	make create-kernal
 	conda activate $(PROJECT_NAME)
 	pip install -r requirements.txt
 
