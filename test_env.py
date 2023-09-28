@@ -6,8 +6,13 @@ import sklearn as sk
 
 has_gpu = torch.cuda.is_available()
 has_mps = torch.backends.mps.is_built()
-device = "mps" if torch.backends.mps.is_built() \
-    else "gpu" if torch.cuda.is_available() else "cpu"
+device = (
+    "mps"
+    if torch.backends.mps.is_built()
+    else "gpu"
+    if torch.cuda.is_available()
+    else "cpu"
+)
 
 print(f"Python Platform: {platform.platform()}")
 print(f"PyTorch Version: {torch.__version__}")
