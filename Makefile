@@ -1,4 +1,4 @@
-PROJECT_NAME := fastapitorch
+PROJECT_NAME := mytorch
 
 lint:
 	ruff --format=github --select=E9,F63,F7,F82 --target-version=py37 .
@@ -8,7 +8,7 @@ format:
 	black .
 
 test:
-	pytest -v
+	pytest -v -s
 	
 export-conda-env:
 	conda env export > environment.yml
@@ -32,10 +32,10 @@ docker-run:
 	docker run -p 8080:8080 $(PROJECT_NAME)
 
 create-env:
-	conda env create -f torch-conda-nightly.yml -n $(PROJECT_NAME) python=3.11
+	conda env create -f environment.yml -n $(PROJECT_NAME)
 
 create-kernal:
-	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 (fastapitorch)"
+	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 ($(PROJECT_NAME))"
 
 setup:
 	make create-env
