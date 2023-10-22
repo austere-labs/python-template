@@ -1,8 +1,7 @@
-PROJECT_NAME := mytorch
+PROJECT_NAME := austerelabsTA
 
 lint:
-	ruff --format=github --select=E9,F63,F7,F82 --target-version=py37 .
-	ruff --format=github --target-version=py37 .
+	ruff check .
 
 format:
 	black .
@@ -10,10 +9,10 @@ format:
 test:
 	pytest -v -s
 	
-export-conda-env:
+export-conda:
 	conda env export > environment.yml
 
-export-requirements:
+export-pip:
 	pip freeze > requirements.txt
 
 check:
