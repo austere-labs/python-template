@@ -1,4 +1,4 @@
-PROJECT_NAME := austerelabsTA
+PROJECT_NAME := REPLACEME
 
 lint:
 	ruff check .
