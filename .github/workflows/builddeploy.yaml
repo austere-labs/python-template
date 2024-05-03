@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  PROJECT_NAME: PYTHON-TEMPLATE
+  PROJECT_NAME: python-template
 
 jobs:
   build-test:
