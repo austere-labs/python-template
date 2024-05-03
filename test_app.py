@@ -1,9 +1,9 @@
 from fastapi.testclient import TestClient
 from fastapi import FastAPI
-from router import router
+from router import routes
 
 app = FastAPI()
-app.include_router(router)
+app.include_router(routes)
 
 client = TestClient(app)
 
