@@ -19,7 +19,7 @@ check:
 	make lint
 	make format
 	make test
-	make export-requirements
+	make export-pip
 
 start:
 	uvicorn app:app --port 8080

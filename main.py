@@ -9,6 +9,7 @@ from config import Config
 app = FastAPI()
 app.include_router(router)
 
+
 def main():
     # Setup logging
     logger = logging.getLogger("indicators-service")
