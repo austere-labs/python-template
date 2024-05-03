@@ -22,7 +22,7 @@ check:
 	make export-pip
 
 start:
-	uvicorn app:app --port 8080
+	python main.py
 
 docker-build:
 	docker build -t $(PROJECT_NAME) .
