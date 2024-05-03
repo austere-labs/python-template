@@ -1,4 +1,4 @@
-PROJECT_NAME := REPLACEME
+PROJECT_NAME := pythontemplate
 
 lint:
 	ruff check .
@@ -33,12 +33,11 @@ docker-run:
 create-env:
 	conda env create -f environment.yml -n $(PROJECT_NAME)
 
-create-kernal:
-	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 ($(PROJECT_NAME))"
+# create-kernel:
+# 	python -m ipykernel install --user --name pytorch --display-name "Python 3.11 ($(PROJECT_NAME))"
 
 setup:
 	make create-env
-	make create-kernal
-	conda activate $(PROJECT_NAME)
 	pip install -r requirements.txt
+	conda activate $(PROJECT_NAME)
 
